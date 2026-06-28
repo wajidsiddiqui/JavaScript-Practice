@@ -1,0 +1,569 @@
+
+Abdul Wajid miya, **6 ghante honestly kaafi hain confidence boost ke liye**, bas ek rule:
+
+❌ Theory mat padhte rehna
+✅ 80% time coding karna
+
+Target:
+
+* Loops = Strong
+* Functions = Strong
+* Arrays = Decent
+* Objects = Basic
+* End tak khud se 1 mini project
+
+---
+
+# Hour 1 → If Else + Switch
+
+## Q1
+
+```js
+let num = 10;
+```
+
+Output:
+
+```
+Positive
+```
+
+---
+
+## Q2
+
+```js
+let age = 17;
+```
+
+Output:
+
+```
+Minor
+```
+
+---
+
+## Q3
+
+Check even or odd
+
+Example:
+
+```js
+let num = 7;
+```
+
+Output:
+
+```
+Odd
+```
+
+---
+
+## Q4
+
+Largest of two numbers
+
+```js
+let a = 20;
+let b = 15;
+```
+
+Output:
+
+```
+20 is greater
+```
+
+---
+
+## Q5 (Ternary)
+
+```js
+let marks = 45;
+```
+
+Output:
+
+```
+Fail
+```
+
+Use only ternary operator.
+
+---
+
+## Q6 (Switch)
+
+```js
+let day = 3;
+```
+
+Output:
+
+```
+Wednesday
+```
+
+---
+
+# Hour 2 → Loops
+
+## Q7
+
+Print 1 to 10
+
+Expected
+
+```
+1
+2
+3
+...
+10
+```
+
+---
+
+## Q8
+
+Print 10 to 1
+
+---
+
+## Q9
+
+Print even numbers 1-20
+
+Expected
+
+```
+2
+4
+6
+...
+20
+```
+
+---
+
+## Q10
+
+Find sum of 1 to 100
+
+Output
+
+```
+5050
+```
+
+---
+
+## Q11
+
+Print multiplication table of 5
+
+```
+5 x 1 = 5
+5 x 2 = 10
+...
+```
+
+---
+
+## Q12
+
+Count digits
+
+```js
+let num = 12345;
+```
+
+Output
+
+```
+5
+```
+
+---
+
+## Q13
+
+Reverse a number
+
+```js
+1234
+```
+
+Output
+
+```
+4321
+```
+
+---
+
+# Hour 3 → Functions
+
+## Q14
+
+Create function
+
+```js
+greet("Abdul")
+```
+
+Output
+
+```
+Hello Abdul
+```
+
+---
+
+## Q15
+
+Function to add two numbers
+
+```js
+add(10,20)
+```
+
+Output
+
+```
+30
+```
+
+---
+
+## Q16
+
+Function to find square
+
+```js
+square(5)
+```
+
+Output
+
+```
+25
+```
+
+---
+
+## Q17
+
+Arrow Function
+
+Convert
+
+```js
+function multiply(a,b){
+ return a*b;
+}
+```
+
+into arrow function.
+
+---
+
+## Q18
+
+Default Parameter
+
+```js
+function greet(name="Guest")
+```
+
+Test:
+
+```js
+greet()
+```
+
+Output
+
+```
+Hello Guest
+```
+
+---
+
+## Q19
+
+Callback Function
+
+Create:
+
+```js
+calculate(10,20,add)
+```
+
+Output
+
+```
+30
+```
+
+---
+
+# Hour 4 → Arrays
+
+## Q20
+
+Create array
+
+```js
+let fruits = ["apple","banana","mango"];
+```
+
+Print mango.
+
+---
+
+## Q21
+
+Push
+
+Add:
+
+```js
+"orange"
+```
+
+---
+
+## Q22
+
+Pop
+
+Remove last element.
+
+---
+
+## Q23
+
+Find largest number
+
+```js
+[10,50,20,90,5]
+```
+
+Output
+
+```
+90
+```
+
+---
+
+## Q24
+
+Map
+
+```js
+[1,2,3,4]
+```
+
+Convert into
+
+```js
+[2,4,6,8]
+```
+
+---
+
+## Q25
+
+Filter
+
+```js
+[10,15,20,25,30]
+```
+
+Output
+
+```js
+[20,30]
+```
+
+---
+
+## Q26
+
+Reduce
+
+```js
+[1,2,3,4]
+```
+
+Output
+
+```
+10
+```
+
+---
+
+# Hour 5 → Objects
+
+## Q27
+
+Create object
+
+```js
+let student = {
+ name:"Abdul",
+ age:22
+}
+```
+
+Print age.
+
+---
+
+## Q28
+
+Add property
+
+```js
+city:"Hyderabad"
+```
+
+---
+
+## Q29
+
+Delete property
+
+```js
+age
+```
+
+---
+
+## Q30
+
+Nested Object
+
+```js
+let user = {
+ name:"Abdul",
+ address:{
+   city:"Hyderabad"
+ }
+}
+```
+
+Print city.
+
+---
+
+## Q31
+
+Object Destructuring
+
+```js
+let student = {
+ name:"Abdul",
+ age:22
+}
+```
+
+Store in variables.
+
+---
+
+## Q32
+
+this keyword
+
+Create object:
+
+```js
+let person = {
+ name:"Abdul",
+ greet:function(){
+   console.log(this.name);
+ }
+}
+```
+
+Output
+
+```
+Abdul
+```
+
+---
+
+# Hour 6 → Confidence Booster Mini Project
+
+### Number Guessing Game
+
+```js
+let secret = 7;
+let guess = 5;
+```
+
+Output
+
+```
+Too Low
+```
+
+---
+
+### Marks Calculator
+
+Input
+
+```js
+90
+```
+
+Output
+
+```
+Grade A
+```
+
+---
+
+### ATM Machine
+
+```js
+let balance = 1000;
+let withdraw = 500;
+```
+
+Output
+
+```
+Remaining Balance = 500
+```
+
+---
+
+# Confidence Challenge 🔥
+
+Agar ye 10 questions bina help ke solve kar liye:
+
+1. Even/Odd
+2. Largest Number
+3. Sum 1-100
+4. Multiplication Table
+5. Reverse Number
+6. Function Add
+7. Arrow Function
+8. Largest in Array
+9. Filter Even Numbers
+10. Object Property Access
+
+Toh samajh lo **JavaScript ka foundation ban gaya**.
+
+Abhi start karo **Q1 se**. Code yahan paste karo. Main teacher ki tarah check karunga, galti batayunga, aur next question dunga.
