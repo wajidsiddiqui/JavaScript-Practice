@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'helvetica neue';
+    color: white;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+.piano{
+    display: flex;
+    gap: 15px;
+    
+}
+.key{
+    width: 50px;
+    height: 250px;
+    background-color: rgb(211, 203, 205);
+    color: rgb(18, 21, 20);
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 15px;
+    cursor: pointer;
+    
+}
