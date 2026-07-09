@@ -6,7 +6,7 @@ let replayBtn = document.querySelector('#replay-button');
 let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*"
 let originalText = matrixContent.innerText;
 let iteration = 0;
-
+let totalColumns = 40;
 
     
 document.addEventListener('mousemove',(e)=>{
@@ -16,15 +16,42 @@ document.addEventListener('mousemove',(e)=>{
     
 });
 
-function createRain(){
+function randomCharacter(){
+    return str[Math.floor(Math.random() *str.length)];
+    
+}
+
+function createRain(i){
     let column = document.createElement("div");
     column.classList.add('column');
-    column.innerText= 'A'
+
+    let characters = "";
+
+    for (let j = 0; j<50 ;j++){
+        characters += randomCharacter() + "\n";
+    }
+
+    column.innerText= characters
+    column.style.left = i * 20 +'px'
+    column.style.top = '0px'
+    
     rain.appendChild(column);
+
+    let topPosition = 0;
+    setInterval(()=>{
+        topPosition += 5;
+        column.style.top =topPosition + "px"
+    }, Math.random() *150 + 50)
     
     
 }
-createRain();
+for (let i =0; i < totalColumns; i++) {
+    
+    createRain(i);
+}
+
+
+
 function matrixText(){
     iteration=0;
         const interval = setInterval(() => {
@@ -37,7 +64,7 @@ function matrixText(){
                     return originalText[idx];
                 }
 
-                return str[Math.floor(Math.random() * str.length)];
+                return randomCharacter()
 
             })
             .join("");
