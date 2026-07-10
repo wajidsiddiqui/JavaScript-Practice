@@ -33,6 +33,18 @@ body {
     color: white;
     overflow: hidden;
 }
+body::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        transparent 0px,
+        transparent 3px,
+        rgba(255,255,255,.015) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+}
 
 .container {
     position: relative;
@@ -67,21 +79,23 @@ body {
     transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: 1;
+    transition: left .05s linear, top .05s linear;
 }
 
 .column {
     position: absolute;
-    /* top: -100%; */
-    top: 0px;
-    left: 50px;
+    top: 0;
     color: var(--primary-color);
     font-size: 1rem;
     line-height: 1;
     white-space: pre;
     user-select: none;
+    font-family: monospace;
+    text-shadow: 0 0 10px var(--glow-color);
+    opacity: 0.7;
 }
 
-.content {
+.content{
     position: relative;
     z-index: 2;
 
@@ -91,6 +105,8 @@ body {
     gap: 1rem;
 
     text-align: center;
+
+    backdrop-filter: blur(3px);
 }
 
 #matrix-text {
@@ -123,7 +139,38 @@ body {
     letter-spacing: 2px;
     opacity: 0.8;
 }
+.char {
+    display: block;
+    color: var(--primary-color);
+}
 
+.char.head {
+    color: #fff;
+    text-shadow:
+        0 0 8px #fff,
+        0 0 15px var(--primary-color),
+        0 0 25px var(--primary-color);
+}
+
+.char:nth-child(2) {
+    opacity: .9;
+}
+
+.char:nth-child(3) {
+    opacity: .8;
+}
+
+.char:nth-child(4) {
+    opacity: .7;
+}
+
+.char:nth-child(5) {
+    opacity: .6;
+}
+
+.char:nth-child(n+6) {
+    opacity: .45;
+}
 #replay-button {
     padding: 12px 24px;
     border: 2px solid var(--primary-color);

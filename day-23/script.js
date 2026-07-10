@@ -1,86 +1,107 @@
-let rain = document.querySelector('.rain')
-let spotlight = document.querySelector('.spotlight');
-let matrixContent = document.querySelector('#matrix-text');
-let replayBtn = document.querySelector('#replay-button');
+let rain = document.querySelector(".rain");
+let spotlight = document.querySelector(".spotlight");
+let matrixContent = document.querySelector("#matrix-text");
+let replayBtn = document.querySelector("#replay-button");
 
-let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*"
+const str =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@#$%&*";
+
 let originalText = matrixContent.innerText;
 let iteration = 0;
-let totalColumns = 40;
 
-    
-document.addEventListener('mousemove',(e)=>{
+const totalColumns = Math.floor(window.innerWidth / 20);
 
-    spotlight.style.left = e.clientX +'px'
-    spotlight.style.top = e.clientY +'px'
-    
+document.addEventListener("mousemove", (e) => {
+  spotlight.style.left = e.clientX + "px";
+  spotlight.style.top = e.clientY + "px";
 });
 
-function randomCharacter(){
-    return str[Math.floor(Math.random() *str.length)];
-    
+function randomCharacter() {
+  return str[Math.floor(Math.random() * str.length)];
 }
 
-function createRain(i){
-    let column = document.createElement("div");
-    column.classList.add('column');
+function generateCharacters() {
+  let html = "";
 
-    let characters = "";
+  for (let i = 0; i < 50; i++) {
+    if (i === 0) {
+      html += `<span class="char head">${randomCharacter()}</span>`;
+    } else {
+      html += `<span class="char">${randomCharacter()}</span>`;
+    }
+  }
 
-    for (let j = 0; j<50 ;j++){
-        characters += randomCharacter() + "\n";
+  return html;
+}
+
+function createRain(i) {
+  const column = document.createElement("div");
+  column.classList.add("column");
+
+  column.innerHTML = generateCharacters();
+
+  column.style.left = `${i * 20}px`;
+
+  let topPosition = -Math.random() * 1200;
+  column.style.top = `${topPosition}px`;
+
+  rain.appendChild(column);
+
+  const speed = Math.random() * 4 + 2;
+
+  setInterval(() => {
+    topPosition += speed;
+
+    column.style.top = `${topPosition}px`;
+
+    column.innerHTML = generateCharacters();
+
+    if (topPosition > window.innerHeight) {
+      topPosition = -Math.random() * 1200;
     }
 
-    column.innerText= characters
-    column.style.left = i * 20 +'px'
-    column.style.top = '0px'
-    
-    rain.appendChild(column);
-
-    let topPosition = 0;
-    setInterval(()=>{
-        topPosition += 5;
-        column.style.top =topPosition + "px"
-    }, Math.random() *150 + 50)
-    
-    
-}
-for (let i =0; i < totalColumns; i++) {
-    
-    createRain(i);
+  }, 50);
 }
 
+for (let i = 0; i < totalColumns; i++) {
+  createRain(i);
+}
+function matrixText() {
+  iteration = 0;
 
-
-function matrixText(){
-    iteration=0;
-        const interval = setInterval(() => {
-
-        matrixContent.innerText = originalText
-            .split("")
-            .map((char, idx) => {
-
-                if (idx < iteration) {
-                    return originalText[idx];
-                }
-
-                return randomCharacter()
-
-            })
-            .join("");
-    iteration += 0.5;
-    if (iteration >= originalText.length) {
-            clearInterval(interval);
-            matrixContent.innerText = originalText;
+  const interval = setInterval(() => {
+    matrixContent.innerText = originalText
+      .split("")
+      .map((char, idx) => {
+        if (idx < iteration) {
+          return originalText[idx];
         }
 
-    }, 100);
-    
+        return randomCharacter();
+      })
+      .join("");
 
+    iteration += 0.5;
+
+    if (iteration >= originalText.length) {
+      clearInterval(interval);
+      matrixContent.innerText = originalText;
+    }
+  }, 80);
 }
 
 matrixText();
 
-// document.addEventListener("mousemove", matrixText);
-replayBtn.addEventListener("click", matrixText);
-    
+replayBtn.addEventListener("click", () => {
+  matrixText();
+});
+
+window.addEventListener("resize", () => {
+  rain.innerHTML = "";
+
+  const totalColumns = Math.floor(window.innerWidth / 20);
+
+  for (let i = 0; i < totalColumns; i++) {
+    createRain(i);
+  }
+});
