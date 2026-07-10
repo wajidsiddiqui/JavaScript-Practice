@@ -93,3 +93,26 @@ A glowing Matrix interface where the spotlight follows the cursor and text is re
 - White glowing leading character
 - Performance optimization
 
+#### Version 1.1
+
+- Refactored Matrix rain into reusable functions
+- Added `generateCharacters()` for reusable Matrix streams
+- Added dynamic HTML generation for Matrix columns
+- Generated Matrix rain columns based on screen width
+- Added random initial positions for every Matrix stream
+- Added infinite Matrix rain loop
+- Added continuously changing Matrix characters
+- Improved Matrix rain randomness
+- Organized JavaScript into reusable modules
+- Improved overall project structure and readability
+
+### Currently Working On
+
+- White glowing moving Matrix head
+- Matrix fading trail effect
+- requestAnimationFrame optimization
+- Random stream lengths
+- Mouse interaction with Matrix rain
+- Performance optimization
+- Responsive font scaling
+- Better visual polish
