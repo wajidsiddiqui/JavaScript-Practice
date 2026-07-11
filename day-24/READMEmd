@@ -1,0 +1,50 @@
+# Day 56 – Introduction to Object-Oriented Programming (OOP) in JavaScript
+
+Today I started learning **Advanced JavaScript** by diving into **Object-Oriented Programming (OOP)**.
+
+##  Topics Covered
+
+* Introduction to OOP
+* Objects
+* Properties & Methods
+* Key & Value
+* Dot Notation (`.`)
+* Bracket Notation (`[]`)
+* Reading, Updating & Adding Object Properties
+* Understanding `undefined`
+* `this` Keyword
+* Function References
+* Classes
+* `new` Keyword
+* Constructors
+* Constructor Parameters
+* Object Initialization
+* Class Methods
+
+##  What I Practiced
+
+* Created objects with different properties and methods.
+* Accessed object properties using both dot and bracket notation.
+* Updated existing properties and added new properties dynamically.
+* Understood how the `this` keyword works based on the object that calls the method.
+* Learned the difference between object properties and constructor parameters.
+* Created multiple objects using a class and the `new` keyword.
+* Used constructors to initialize object data.
+* Added methods inside a class and called them using different object instances.
+
+##  Mini Project
+
+Built a simple **Car Garage** project using JavaScript Classes.
+
+### Features
+
+* Create multiple car objects
+* Store car details using a constructor
+* Start the car
+* Drive the car
+* Stop the car
+* Demonstrate how `this` works with different object instances
+
+##  Key Learning
+
+Today I understood that a **class is a blueprint**, while an **object is the actual instance** created from that blueprint. I also learned how constructors initialize objects, how the `new` keyword creates new instances, and how the `this` keyword refers to the object that invokes a method.
