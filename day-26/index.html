@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Student Result Manager</h1>
+
+    <div class="form">
+        <input type="text" id="name" placeholder="Student Name">
+        <input type="number" id="roll" placeholder="Roll Number">
+        <input type="number" id="marks" placeholder="Marks">
+
+        <button id="addBtn">Add Student</button>
+    </div>
+
+    <div class="stats">
+        <p>Total Students : <span id="total">0</span></p>
+        <p>Passed : <span id="pass">0</span></p>
+        <p>Failed : <span id="fail">0</span></p>
+    </div>
+
+    <div id="studentList"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

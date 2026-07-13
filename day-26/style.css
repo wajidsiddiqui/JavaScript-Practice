@@ -1,0 +1,59 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+}
+
+.container{
+    width:700px;
+    margin:40px auto;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.form{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+input{
+    flex:1;
+    padding:10px;
+}
+
+button{
+    padding:10px 20px;
+    cursor:pointer;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+    font-weight:bold;
+}
+
+.card{
+    background:white;
+    padding:15px;
+    margin-bottom:15px;
+    border-left:6px solid green;
+    border-radius:8px;
+}
+
+.fail{
+    border-left-color:red;
+}
+
+.card button{
+    margin-top:10px;
+}
